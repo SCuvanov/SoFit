@@ -1,0 +1,122 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scuvanov.sofit.fragment.UserFragment">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/white_background_shadow"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/imageViewProfile"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/user" />
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                    android:id="@+id/textViewTitle"
+                    style="@style/TextViewAppearance.Title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Placeholder"
+                    android:textSize="20sp"
+                    app:typeface="robotoBold" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@color/material_grey_200"
+                android:orientation="horizontal"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                    android:id="@+id/textViewRecent"
+                    style="@style/TextViewAppearance.Title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:text="Recent"
+                    android:textColor="@drawable/signinsignout_selector"
+                    android:textSize="15sp"
+                    app:typeface="robotoBold" />
+
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/material_grey_200"
+                    android:orientation="horizontal"></LinearLayout>
+
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                    android:id="@+id/textViewFavorites"
+                    style="@style/TextViewAppearance.Title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:ellipsize="none"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:text="Favorites"
+                    android:textColor="@drawable/signinsignout_selector"
+                    android:textSize="15sp"
+                    app:typeface="robotoBold" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvRecent"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:listSelector="@android:color/transparent" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvFavorites"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+
+</FrameLayout>

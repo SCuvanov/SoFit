@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_height="match_parent"
+        android:id="@+id/workoutView">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="10dp" android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/linearLayoutRadio" android:layout_margin="5dp">
+            <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:orientation="horizontal">
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Traditional"
+                        android:id="@+id/radioButtonTraditional" android:layout_weight="1" android:gravity="center"
+                        android:textAppearance="@style/TextViewAppearance.Custom"
+                        android:textColor="@color/main_color_grey_600" android:textSize="15sp"
+                        android:textStyle="bold"/>
+                <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CrossFit"
+                        android:id="@+id/radioButtonCrossFit" android:layout_weight="1" android:gravity="center"
+                        android:textAppearance="@style/TextViewAppearance.Custom"
+                        android:textColor="@color/main_color_grey_600" android:textSize="15sp"
+                        android:textStyle="bold"/>
+            </RadioGroup>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:focusableInTouchMode="false" android:id="@+id/linearLayoutActivityName"
+                android:focusable="true">
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter Activity Name"
+                    android:id="@+id/etWorkoutName" android:layout_margin="5dp" android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout android:orientation="vertical" android:background="@color/material_grey_200"
+                      android:layout_width="fill_parent" android:layout_height="1dp"
+                      android:id="@+id/linearLayoutTopDivider"/>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/linearLayoutTraditional">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_margin="5dp"
+                    android:id="@+id/linearLayoutExerciseType">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewExerciseType"
+                            style="@style/TextViewAppearance.Title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/secondary_blue"
+                            android:text="Type:"
+                            android:textSize="15sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:gravity="center" android:padding="5dp"/>
+                    <Spinner
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinnerExerciseType" android:textAlignment="center"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_margin="5dp" android:id="@+id/linearLayoutExerciseCategoryStrength">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewExerciseCategoryStrength"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Category:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+                <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerExerciseCategoryStrength" android:textAlignment="center"
+                        android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:layout_margin="5dp" android:id="@+id/linearLayoutExerciseCategoryEndurance"
+                    android:visibility="gone">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewExerciseCategoryEndurance"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Category:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+                <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerExerciseCategoryEndurance" android:textAlignment="center"
+                        android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@color/material_grey_200"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp">
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutWeightlifting">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:id="@+id/linearLayoutWeight"
+                        android:layout_margin="5dp">
+
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewWeight"
+                            style="@style/TextViewAppearance.Title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/secondary_blue"
+                            android:text="Weight:"
+                            android:textSize="15sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:gravity="center" android:padding="5dp"/>
+                    <EditText
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/editTextWeight" android:gravity="center" android:hint="000 Lbs"/>
+
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_margin="5dp" android:id="@+id/linearLayoutSetsReps">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:layout_weight="1">
+                        <com.scuvanov.sofit.font.RobotoTextView
+                                android:id="@+id/textViewSet"
+                                style="@style/TextViewAppearance.Title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/secondary_blue"
+                                android:text="Sets:"
+                                android:textSize="15sp"
+                                app:typeface="robotoBold"
+                                android:orientation="horizontal"
+                                android:gravity="center" android:padding="5dp"/>
+                        <Spinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/spinnerSets" android:textAlignment="center" android:layout_weight="1"/>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="1dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@color/material_grey_200"
+                            android:layout_height="fill_parent">
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:layout_weight="1">
+                        <com.scuvanov.sofit.font.RobotoTextView
+                                android:id="@+id/textViewRep"
+                                style="@style/TextViewAppearance.Title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/secondary_blue"
+                                android:text="Reps:"
+                                android:textSize="15sp"
+                                app:typeface="robotoBold"
+                                android:orientation="horizontal"
+                                android:gravity="center" android:padding="5dp"/>
+                        <Spinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/spinnerReps" android:textAlignment="center" android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutDistance" android:layout_margin="5dp"
+                    android:visibility="gone">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewDistance"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Distance:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+                <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerDistance" android:textAlignment="center" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutOther" android:layout_margin="5dp"
+                    android:visibility="gone">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewDesc"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Desc:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/editTextDesc" android:hint="Enter Description"
+                        android:inputType="textMultiLine"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" android:id="@+id/linearLayoutCrossfit">
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutCrossfitType"
+                    android:layout_margin="5dp">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewCrossfitType"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Category:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+                <Spinner
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerCrossfitType" android:textAlignment="center"
+                        android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutForRepsTime"
+                    android:layout_margin="5dp">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewCrossfitReps"
+                            style="@style/TextViewAppearance.Title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/secondary_blue"
+                            android:text="Reps:"
+                            android:textSize="15sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:gravity="center" android:padding="5dp"/>
+                    <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinnerCrossfitReps" android:textAlignment="center" android:layout_weight="1"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewCrossfitTime"
+                            style="@style/TextViewAppearance.Title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/secondary_blue"
+                            android:text="Time:"
+                            android:textSize="15sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:gravity="center" android:padding="5dp"/>
+                    <Spinner
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinnerCrossfitTime" android:textAlignment="center" android:layout_weight="1"/>
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutForReps"
+                    android:layout_margin="5dp">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewForRounds"
+                            style="@style/TextViewAppearance.Title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/secondary_blue"
+                            android:text="Sets:"
+                            android:textSize="15sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:gravity="center" android:padding="5dp"/>
+                    <Spinner
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinnerForRounds" android:textAlignment="center" android:layout_weight="1"/>
+                </LinearLayout>
+
+
+                <LinearLayout android:orientation="horizontal" android:layout_width="1dp"
+                              android:layout_marginLeft="5dp" android:layout_marginRight="5dp"
+                              android:background="@color/material_grey_200" android:layout_height="fill_parent"/>
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" android:layout_weight="1">
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewForReps"
+                            style="@style/TextViewAppearance.Title1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/secondary_blue"
+                            android:text="Reps:"
+                            android:textSize="15sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:gravity="center" android:padding="5dp"/>
+                    <Spinner
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/spinnerForReps" android:textAlignment="center" android:layout_weight="1"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutForTime"
+                    android:layout_margin="5dp">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewCrossfitForTime"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Time:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+                <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/spinnerCrossfitForTime" android:textAlignment="center" android:layout_weight="1"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutForWeight"
+                    android:layout_margin="5dp">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewForWeight"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Weight:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/editTextForWeight" android:gravity="center" android:hint="000 Lbs"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent" android:id="@+id/linearLayoutCrossfitOther"
+                    android:layout_margin="5dp">
+
+                <com.scuvanov.sofit.font.RobotoTextView
+                        android:id="@+id/textViewCrossfitDesc"
+                        style="@style/TextViewAppearance.Title1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_blue"
+                        android:text="Desc:"
+                        android:textSize="15sp"
+                        app:typeface="robotoBold"
+                        android:orientation="horizontal"
+                        android:gravity="center" android:padding="5dp"/>
+
+                <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:id="@+id/editTextCrossfitDesc" android:hint="Enter Description"
+                        android:inputType="textMultiLine"/>
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:background="@color/material_grey_200"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp" android:id="@+id/linearLayoutBottomDivider">
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content">
+
+    <com.scuvanov.sofit.font.RobotoTextView
+            android:id="@+id/textViewDialogTimer"
+            style="@style/TextViewAppearance.Title1"
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="0" android:textSize="50sp" android:textColor="@color/material_grey_500"
+            android:layout_gravity="center" android:padding="5dp" android:gravity="center"/>
+
+</LinearLayout>

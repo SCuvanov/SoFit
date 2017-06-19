@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "355488871565",
+    "firebase_url": "https://sofit-9d8fc.firebaseio.com",
+    "project_id": "sofit-9d8fc",
+    "storage_bucket": "sofit-9d8fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:355488871565:android:66b7fbcf9d0b3a76",
+        "android_client_info": {
+          "package_name": "com.scuvanov.sofit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "355488871565-af5a1ld7jb8gh2bg72qb287grlirulil.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.scuvanov.sofit",
+            "certificate_hash": "71779dbe4317579b08f3c0837918845ed2eb4018"
+          }
+        },
+        {
+          "client_id": "355488871565-7d7heomhherrndglstkmbgt4la5v4mt2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS3KQfF19CkLgEbU5WZQoNgB0X94hSZNg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "355488871565-7d7heomhherrndglstkmbgt4la5v4mt2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

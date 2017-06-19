@@ -1,0 +1,194 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.scuvanov.sofit.fragment.SettingsFragment">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/scrollView">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+            <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_viewStopwatch"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="4dp"
+                    android:layout_margin="5dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                    <ImageView
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/stopwatch"
+                            android:id="@+id/imageViewStopwatch" android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:gravity="center">
+                        <com.scuvanov.sofit.font.RobotoTextView
+                                android:id="@+id/textViewStopwatch"
+                                style="@style/TextViewAppearance.Title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Stopwatch"
+                                android:textSize="25sp"
+                                app:typeface="robotoBold"
+                                android:orientation="horizontal"
+                                android:gravity="left"
+                                android:adjustViewBounds="false" android:layout_gravity="center"
+                                android:layout_marginRight="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_viewStopwatchDetail"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="4dp"
+                    android:layout_margin="5dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                    <Chronometer
+                            android:layout_width="wrap_content"
+                            android:format="%s"
+                            android:textColor="@color/material_grey_500"
+                            android:textSize="50sp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/chronometer" android:layout_gravity="center"/>
+
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:gravity="center" android:layout_marginBottom="10dp">
+                        <Button
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:background="@drawable/play_button_selector"
+                                android:id="@+id/btnStartStopwatch" android:layout_marginRight="5dp"/>
+                        <Button
+                                android:layout_width="75dp"
+                                android:background="@drawable/stop_button_selector"
+                                android:layout_height="75dp"
+                                android:id="@+id/btnStopStopwatch" android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"/>
+
+                        <Button
+                                android:layout_width="75dp"
+                                android:background="@drawable/reset_button_selector"
+                                android:layout_height="75dp"
+                                android:id="@+id/btnResetStopwatch" android:layout_marginLeft="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_viewAMRAP"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="4dp"
+                    android:layout_margin="5dp">
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                    <ImageView
+                            android:layout_width="75dp"
+                            android:layout_height="75dp"
+                            android:src="@drawable/clock3"
+                            android:id="@+id/imageViewAMRAP" android:layout_margin="10dp"/>
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:gravity="center">
+                        <com.scuvanov.sofit.font.RobotoTextView
+                                android:id="@+id/textViewAMRAP"
+                                style="@style/TextViewAppearance.Title1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="AMRAP"
+                                android:textSize="25sp"
+                                app:typeface="robotoBold"
+                                android:orientation="horizontal"
+                                android:gravity="left"
+                                android:adjustViewBounds="false" android:layout_gravity="center"
+                                android:layout_marginRight="20dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/card_viewAMRAPDetail"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    card_view:cardCornerRadius="4dp"
+                    android:layout_margin="5dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                    <com.scuvanov.sofit.font.RobotoTextView
+                            android:id="@+id/textViewAMRAPTimer"
+                            style="@style/TextViewAppearance.Title1"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="00:00" android:textSize="50sp" android:textColor="@color/material_grey_500"
+                            android:layout_gravity="center" android:padding="5dp"/>;
+                            android:textSize="25sp"
+                            app:typeface="robotoBold"
+                            android:orientation="horizontal"
+                            android:adjustViewBounds="false" android:layout_gravity="center"
+                            android:layout_marginRight="20dp"/>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent" android:gravity="center" android:layout_marginBottom="10dp">
+                        <Button
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:background="@drawable/play_button_selector"
+                                android:id="@+id/btnStartAMRAP" android:layout_marginRight="5dp"/>
+                        <Button
+                                android:layout_width="75dp"
+                                android:background="@drawable/stop_button_selector"
+                                android:layout_height="75dp"
+                                android:id="@+id/btnStopAMRAP" android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"/>
+
+                        <Button
+                                android:layout_width="75dp"
+                                android:background="@drawable/reset_button_selector"
+                                android:layout_height="75dp"
+                                android:id="@+id/btnResetAMRAP" android:layout_marginLeft="5dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,15 @@
+<resources>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/secondary_blue</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/secondary_blue</item>
+    </style>
+
+    <style name="DialogCustom" parent="@android:style/Theme.Dialog">
+        <item name="android:background">@color/transparent</item>
+        <item name="colorAccent">@color/secondary_blue</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/secondary_blue</item>
+    </style>
+
+</resources>

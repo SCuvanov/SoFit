@@ -1,0 +1,49 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.scuvanov.sofit.fragment.FeedFragment">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvFeed"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <com.scuvanov.sofit.font.RobotoTextView
+        android:id="@+id/textViewTutorialAdd"
+        style="@style/TextViewAppearance.Title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="25dp"
+        android:drawableRight="@drawable/ic_content_forward"
+        android:ellipsize="none"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:text="Press to share a workout!"
+        android:textColor="@color/secondary_blue"
+        android:textSize="15sp"
+        app:typeface="robotoBold" />
+
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="25dp"
+        android:background="@drawable/add_content_selector"
+        android:elevation="4dp" />
+
+</FrameLayout>
