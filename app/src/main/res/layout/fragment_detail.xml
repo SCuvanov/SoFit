@@ -6,6 +6,16 @@
     tools:context="com.scuvanov.sofit.fragment.WorkoutDetailFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_gravity="left|bottom"
+        android:layout_margin="25dp"
+        android:background="@drawable/back_selector"
+        android:isScrollContainer="false" />
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -26,6 +36,7 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
                     android:id="@+id/imageViewProfilePic"
+                    android:src="@drawable/user"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_margin="16dp" />
@@ -253,13 +264,4 @@
             android:divider="@null"
             android:listSelector="@android:color/transparent" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/buttonBack"
-        android:layout_width="55dp"
-        android:layout_height="55dp"
-        android:layout_gravity="left|bottom"
-        android:layout_margin="25dp"
-        android:background="@drawable/back_selector"
-        android:isScrollContainer="false" />
 </FrameLayout>

@@ -288,12 +288,6 @@ public class UserFragment extends Fragment implements View.OnClickListener {
         Intent cropIntent = new Intent();
         cropIntent.setType("image/*");
         cropIntent.setAction(Intent.ACTION_PICK);
-        cropIntent.putExtra("crop", "true");
-        cropIntent.putExtra("scale", true);
-        cropIntent.putExtra("outputX", PHOTO_WIDTH);
-        cropIntent.putExtra("outputY", PHOTO_HEIGHT);
-        cropIntent.putExtra("aspectX", 1);
-        cropIntent.putExtra("aspectY", 1);
         cropIntent.putExtra("return-data", true);
         startActivityForResult(cropIntent, SELECT_IMAGE_ACTIVITY_REQUEST_CODE);
     }
